@@ -156,9 +156,10 @@ function Resume() {
               <Link href={LINKEDIN_LINK} target="_blank" rel="noopener noreferrer">
                 <Linkedin className="w-5 h-5 text-[#4a4a4a] hover:text-[#1a1a1a] dark:text-[#cccccc] dark:hover:text-[#ffffff]" />
               </Link>
-              <button onClick={copyEmailToClipboard}>
+              {/* EMAIL COMMENTED OUT FOR SECURITY */}
+              {/* <button onClick={copyEmailToClipboard}>
                 <Mail className="w-5 h-5 text-[#4a4a4a] hover:text-[#1a1a1a] dark:text-[#cccccc] dark:hover:text-[#ffffff]" />
-              </button>
+              </button> */}
             </div>
             <div className="flex space-x-3">
               <button
