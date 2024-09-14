@@ -7,18 +7,32 @@ export const ptSerif = PT_Serif({
 })
 
 export const skillColors: { [key: string]: string } = {
-  React: 'bg-blue-100 text-blue-800 dark:bg-blue-800 dark:text-blue-100',
-  TypeScript: 'bg-green-100 text-green-800 dark:bg-green-800 dark:text-green-100',
-  JavaScript: 'bg-yellow-100 text-yellow-800 dark:bg-yellow-800 dark:text-yellow-100',
-  'Next.js': 'bg-black text-white dark:bg-white dark:text-black',
-  GraphQL: 'bg-pink-100 text-pink-800 dark:bg-pink-800 dark:text-pink-100',
-  Redux: 'bg-purple-100 text-purple-800 dark:bg-purple-800 dark:text-purple-100',
+  'Swift': 'bg-blue-100 text-blue-800 dark:bg-blue-800 dark:text-blue-100',
+  'UIKit': 'bg-green-100 text-green-800 dark:bg-green-800 dark:text-green-100',
+  'Machine Learning': 'bg-yellow-100 text-yellow-800 dark:bg-yellow-800 dark:text-yellow-100',
+  'Artificial Intelligence': 'bg-black text-white dark:bg-white dark:text-black',
+  'Python': 'bg-pink-100 text-pink-800 dark:bg-pink-800 dark:text-pink-100',
+  'Quant': 'bg-purple-100 text-purple-800 dark:bg-purple-800 dark:text-purple-100',
   'Tailwind CSS': 'bg-cyan-100 text-cyan-800 dark:bg-cyan-800 dark:text-cyan-100',
-  WCAG: 'bg-orange-100 text-orange-800 dark:bg-orange-800 dark:text-orange-100',
-  'Spotify API': 'bg-green-100 text-green-800 dark:bg-green-800 dark:text-green-100',
-  OAuth: 'bg-red-100 text-red-800 dark:bg-red-800 dark:text-red-100',
-  Storybook: 'bg-indigo-100 text-indigo-800 dark:bg-indigo-800 dark:text-indigo-100',
-  Jest: 'bg-red-100 text-red-800 dark:bg-red-800 dark:text-red-100',
+  'Leadership': 'bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-100',
+  'Next.js': 'bg-blue-200 text-blue-900 dark:bg-blue-900 dark:text-blue-200',
+  'TypeScript': 'bg-blue-300 text-blue-900 dark:bg-blue-900 dark:text-blue-300',
+  'Java': 'bg-red-200 text-red-900 dark:bg-red-900 dark:text-red-200',
+  'Agile': 'bg-green-200 text-green-900 dark:bg-green-900 dark:text-green-200',
+  'Figma': 'bg-purple-200 text-purple-900 dark:bg-purple-900 dark:text-purple-200',
+  'API': 'bg-yellow-200 text-yellow-900 dark:bg-yellow-900 dark:text-yellow-200',
+  'React.js': 'bg-blue-400 text-blue-900 dark:bg-blue-900 dark:text-blue-400',
+  'PostgreSQL': 'bg-orange-200 text-orange-900 dark:bg-orange-900 dark:text-orange-200',
+  'Firebase Auth': 'bg-yellow-300 text-yellow-900 dark:bg-yellow-900 dark:text-yellow-300',
+  'Heroku': 'bg-indigo-200 text-indigo-900 dark:bg-indigo-900 dark:text-indigo-200',
+  'Express.js': 'bg-green-300 text-green-900 dark:bg-green-900 dark:text-green-300',
+  'MongoDB': 'bg-green-400 text-green-900 dark:bg-green-900 dark:text-green-400',
+  'JWT': 'bg-red-300 text-red-900 dark:bg-red-900 dark:text-red-300',
+  'Algorithms': 'bg-blue-500 text-blue-900 dark:bg-blue-900 dark:text-blue-500',
+  'Blockchain': 'bg-gray-200 text-gray-900 dark:bg-gray-900 dark:text-gray-200',
+  'Multithreading': 'bg-purple-300 text-purple-900 dark:bg-purple-900 dark:text-purple-300',
+  'Sockets': 'bg-yellow-400 text-yellow-900 dark:bg-yellow-900 dark:text-yellow-400',
+  'Tensorflow': 'bg-orange-300 text-orange-900 dark:bg-orange-900 dark:text-orange-300',
 }
 
 export const HEADINGS = {
@@ -57,202 +71,224 @@ export interface ProjectInterface {
 
 export const experiences: ExperienceInterface[] = [
   {
-    title: "Senior Frontend Engineer, Accessibility",
-    company: "Klaviyo",
-    description: "Build and maintain critical components used to construct Klaviyo's frontend, across the whole product. Work closely with cross-functional teams, including developers, designers, and product managers, to implement and advocate for best practices in web accessibility.",
-    skills: ['React', 'TypeScript', 'GraphQL', 'WCAG'],
-    dateRange: "2024 — PRESENT",
-    image: "/placeholder.svg?height=300&width=500",
+    title: "iOS Developer Intern, Design System",
+    company: "Revolut",
+    description: "Created proprietary module to extract metadata from media, to conditionally and efficiently render videos and photos in-app for 30+ million iOS users.",
+    skills: ['Swift', 'UIKit'],
+    dateRange: "JULY - SEPTEMBER 2024",
+    image: "/images/revolut-logo.png",
     content: `
-# Senior Frontend Engineer, Accessibility at Klaviyo
+## Summary
 
-As a Senior Frontend Engineer specializing in Accessibility at Klaviyo, my role involves:
+I worked in conjunction with the design team to create a module that would extract metadata from media, to conditionally and efficiently render videos and photos in-app for 30+ million iOS users.
 
-## Key Responsibilities
+The module was built with AVFoundation in UIKit, and will be used across the whole app in development to render videos and photos based on the metadata that the Design team add.
 
-1. **Component Development**
-   - Build and maintain critical components for Klaviyo's frontend
-   - Ensure components are reusable, performant, and accessible
+## Key Skills
 
-2. **Accessibility Advocacy**
-   - Implement best practices in web accessibility
-   - Educate and guide other team members on accessibility standards
+My key skills / improvements from the internship were:
 
-3. **Cross-functional Collaboration**
-   - Work closely with developers, designers, and product managers
-   - Ensure accessibility is considered at all stages of product development
+💻 **Swift + UIKit Development** - this was my first time ever working in Swift, and I tackled complex memory and concurrency topics daily in order to build my module.
 
-4. **Technical Leadership**
-   - Provide technical guidance and mentorship to junior engineers
-   - Contribute to architectural decisions and code reviews
+⚙️ **Large Scale App Development** - I learned so much about how to develop software at scale, proper conduct for code reviews and CI/CD, and it was very insightful to see what goes into maintaining a globally scaled app.
 
-5. **Continuous Improvement**
-   - Stay updated with the latest accessibility guidelines and technologies
-   - Implement and advocate for accessibility testing processes
-
-This role allows me to combine my passion for frontend development with my commitment to creating inclusive digital experiences for all users.
+🤝 **Cross-Department Collaboration** - my work involved close collaboration with the design team, and I went out of my way to help people in other projects e.g. people working with SQL in Operations. I was able to effectively integrate myself into my team to aid efficiency.
 `,
   },
   {
-    title: "Frontend Engineer",
-    company: "TechCorp Inc.",
-    description: "Developed and maintained responsive web applications using React and Next.js. Collaborated with UX designers to implement pixel-perfect, accessible user interfaces. Optimized application performance and improved load times by 40%.",
-    skills: ['React', 'Next.js', 'Redux', 'Tailwind CSS'],
-    dateRange: "2022 — 2024",
-    image: "/placeholder.svg?height=300&width=500",
+    title: "Braille Auto-Predictive ML REST API",
+    company: "Paige Braille",
+    description: "Conducted ML / AI model exploration to develop and deploy an ensemble model for Braille next character prediction, to upgrade learning experience for 100s of vision impaired users.",
+    skills: ['Python', 'Machine Learning', 'Artificial Intelligence', "API"],
+    dateRange: "JANUARY - MARCH 2024",
+    image: "/images/paige-braille-logo.jpeg",
     content: `
-# Frontend Engineer at TechCorp Inc.
+## Summary
 
-During my time as a Frontend Engineer at TechCorp Inc., I focused on:
+I worked with a team of 6 to develop an ensemble model for Braille next character prediction, to upgrade the learning experience for 100s of vision impaired users.
 
-## Key Achievements
+Researching and testing 10+ models, I created a custom stacked Random Forest on temperature sampled LSTM and Fivegram models to boost prediction accuracy from 79% to 94%.
 
-1. **Web Application Development**
-   - Built responsive web applications using React and Next.js
-   - Implemented state management solutions using Redux
+## Key Skills
 
-2. **UI/UX Collaboration**
-   - Worked closely with UX designers to create pixel-perfect interfaces
-   - Ensured accessibility standards were met in all user interfaces
+My key skills / improvements from the project were:
 
-3. **Performance Optimization**
-   - Improved application load times by 40% through various optimization techniques
-   - Implemented code splitting and lazy loading to enhance performance
+🤖 **ML / AI Exploration** - it was fascinating to research several different models and techniques, and I was able to use these insights to significantly boost the model's performance and thus experience for 100s of users.
 
-4. **Tailwind CSS Implementation**
-   - Adopted Tailwind CSS for efficient and consistent styling across projects
-   - Created a custom design system using Tailwind's configuration
-
-5. **Agile Development**
-   - Participated in agile ceremonies and contributed to sprint planning
-   - Collaborated effectively with backend developers and QA engineers
-
-This role significantly enhanced my skills in modern frontend development and taught me the importance of performance optimization in large-scale applications.
+⚙️ **Client Understanding** - as a team we had regular catch-ups with the client to understand their requirements and expectations, and we were able to use this feedback to iteratively improve the product.
 `,
+},
+{
+   title: "Quantitative Software Developer Intern",
+   company: "Skillikz Ltd.",
+   description: "Independently developed CRM Python model, implementing DCF, BG-NBD and more models for CLV analysis to provide data-driven customer segment analysis and marketing prompts.",
+   skills: ['Python', 'Machine Learning', 'Quant'],
+   dateRange: "AUGUST - SEPTEMBER 2023",
+   image: "/images/skillikz-logo.jpeg",
+   content: `
+## Summary
+
+I worked with a team of 6 to develop an ensemble model for Braille next character prediction, to upgrade the learning experience for 100s of vision impaired users.
+
+Researching and testing 10+ models, I created a custom stacked Random Forest on temperature sampled LSTM and Fivegram models to boost prediction accuracy from 79% to 94%.
+
+## Key Skills
+
+My key skills / improvements from the project were:
+
+🤖 **ML / AI Exploration** - it was fascinating to research several different models and techniques, and I was able to use these insights to significantly boost the model's performance and thus experience for 100s of users.
+
+⚙️ **Client Understanding** - as a team we had regular catch-ups with the client to understand their requirements and expectations, and we were able to use this feedback to iteratively improve the product.
+`,
+ },
+ {
+    title: "Cofounder, CS Specialist Mentor and CTO",
+    company: "PersonalPath",
+    description: "Cofounded a startup to guide students through their university applications, with alumni at Oxford, Cambridge, Imperial and more. Deployed elegant Next.js website: **[www.personalpath.co.uk](https://www.personalpath.co.uk)**",
+    skills: ['Leadership', 'Next.js', 'TypeScript'],
+    dateRange: "JULY 2023 - PRESENT",
+    image: "/images/personalpath-logo.jpg",
+    content: `
+ ## Summary
+ 
+ With my 3 best friends, I cofounded a startup that is a sixth form student's comprehensive guide to UCAS university applications. Over the years we have gotten people into all of the UK's top 10 universities, and made 10000s of online impressions.
+ 
+ As part of this, I created our website **[www.personalpath.co.uk](https://www.personalpath.co.uk)**
+ 
+ ## Key Skills
+ 
+ My key skills / improvements from PersonalPath are:
+ 
+🌐 **Full Stack Deployment** - this project really solidified my confidence in quickly and efficiently building elegant websites to deployment.
+ 
+ 👏 **Entrepreneurship** - we managed to rapidly grow our company within the span of a year, and learnt a lot about marketing, client management and business along the way.
+ `,
   }
 ]
 
 export const projects: ProjectInterface[] = [
   {
-    title: "Spotify Web App Course",
-    description: "Created a comprehensive video course teaching developers how to build a web application using the Spotify API. Covers React, API integration, authentication, and deployment.",
-    skills: ['React', 'Spotify API', 'OAuth'],
-    link: "https://example.com/spotify-course",
-    image: "/placeholder.svg?height=300&width=500",
-    date: "2023-05-15",
+    title: "Sailing Weather JavaFX Mobile App",
+    description: "Developed a mobile app for sailors to access weather forecasts and safety info, with agile development and proper user research and evaluation methods.",
+    skills: ['Java', 'Agile', 'Figma', "API"],
+    link: "",
+    image: "/images/sailing-banner.jpg",
+    date: "MAY - JUNE 2023",
     content: `
-# Spotify Web App Course
+In a team of 5, we developed a mobile app for sailors to access sailing-specific weather forecast information, utilizing the OpenMeteo API.
 
-This course covers everything you need to know to build a web application using the Spotify API. Throughout the course, you'll learn:
+We created user-centred Figma prototypes, and conducted various user research and heuristic evaluation methods to ensure the quality of the product.
 
-## Key Topics
+## Key Skills
 
-1. **Setting up your development environment**
-   - Installing necessary tools and dependencies
-   - Creating a new React project
+My key skills from this project were:
 
-2. **Understanding the Spotify API**
-   - Overview of available endpoints
-   - Authentication methods
+💻 **Java Development** - I gained experience using Java in a team development environment with CI/CD pipelines, strengthening my confidence and skill with the language.
 
-3. **Building the user interface**
-   - Creating reusable React components
-   - Implementing responsive design with CSS
+📲 **User-Centred Design** - as a team, we put the user at the heart of the product, and iterating over feedback in the structured manner we did was insightful into a development design process.
 
-4. **Integrating with the Spotify API**
-   - Making API requests
-   - Handling responses and errors
-
-5. **Implementing user authentication**
-   - Setting up OAuth 2.0
-   - Managing user sessions
-
-6. **Advanced features**
-   - Real-time updates with WebSockets
-   - Caching strategies for improved performance
-
-7. **Testing and deployment**
-   - Writing unit and integration tests
-   - Deploying your app to a hosting platform
-
-By the end of this course, you'll have a fully functional Spotify web app and the skills to build many more exciting projects!
+🕜 **Agile Development** - working in a 2 week sprint cycle really honed my ability to deliver software quickly and effectively, and I became very accustomed to the process of development and deployment.
 `,
   },
   {
-    title: "Accessibility Toolkit",
-    description: "Developed an open-source toolkit of React components focused on web accessibility. Includes fully customizable, WCAG 2.1 compliant UI elements with extensive documentation.",
-    skills: ['React', 'TypeScript', 'Storybook', 'Jest'],
-    link: "https://example.com/a11y-toolkit",
-    image: "/placeholder.svg?height=300&width=500",
-    date: "2023-08-01",
+    title: "Project Silverline",
+    description: "Created a React.js full stack blog website for short form articles in Year 12, and got 10+ students and teachers to post and interact with users on the platform",
+    skills: ['React.js', 'PostgreSQL', 'Firebase Auth', 'Heroku'],
+    link: "",
+    image: "/images/blog-banner.png",
+    date: "JUNE 2021",
     content: `
-# Accessibility Toolkit
+In Year 12, for my first major project, I created a full stack MERN website for short form academic articles in the style of a Twitter format.
 
-This open-source toolkit provides a set of React components that are fully compliant with WCAG 2.1 guidelines. Our goal is to make web accessibility easier for developers to implement.
+As part of this project, I implemented Firebase Authentication, and hosted the website on the Heroku free tier.
 
-## Features
+## Key Skills
 
-- **Fully Customizable Components**: Each component can be styled to fit your project's design system.
-- **WCAG 2.1 Compliant**: All components meet the latest web accessibility guidelines.
-- **Extensive Documentation**: Detailed usage instructions and best practices for each component.
-- **TypeScript Support**: Full TypeScript definitions for improved developer experience.
-- **Storybook Integration**: Interactive component library for easy testing and development.
-- **Comprehensive Test Suite**: Jest and React Testing Library tests ensuring reliability.
+My key skills / takeaways from this project were:
 
-## Components
+📚 **Full Stack Development** - this was my first time implementing different microservices such as the Azure based PostgreSQL instance, and linking them all together to make a website. It was a very rewarding process!
 
-1. **Accessible Buttons**
-   - Various styles with proper ARIA attributes
-   - Keyboard navigation support
-
-2. **Form Inputs**
-   - Text inputs, checkboxes, radio buttons, and more
-   - Clear error states and helper text
-
-3. **Modal Dialogs**
-   - Keyboard trapping for improved focus management
-   - Proper ARIA roles and attributes
-
-4. **Navigation Menus**
-   - Dropdown menus with keyboard support
-   - Mobile-friendly navigation patterns
-
-5. **Data Tables**
-   - Sortable and filterable tables
-   - Proper table semantics for screen readers
-
-6. **And many more!**
-
-We're constantly adding new components and improving existing ones. Contributions are welcome!
-
-## Getting Started
-
-To start using the Accessibility Toolkit in your project, install it via npm:
-
-\`\`\`bash
-npm install a11y-toolkit
-\`\`\`
-
-Then, import and use the components in your React application:
-
-\`\`\`jsx
-import { Button, TextInput } from 'a11y-toolkit';
-
-function MyForm() {
-  return (
-    <form>
-      <TextInput label="Name" id="name" />
-      <Button>Submit</Button>
-    </form>
-  );
-}
-\`\`\`
-
-Check out our documentation for more detailed usage instructions and examples.
-
-Let's make the web more accessible, one component at a time!
+👥 **Entrepreneurship** - I was the first person in my school to create a website like this, and I had to learn how to market and sell the product to get people to use it. It was very rewarding to see people engage with the product and get used to the new way of consuming content.
 `,
-  }
+  },
+{
+   title: "E-Commerce Distributed Express.js REST API",
+   description: "Deployed a secure example e-commerce REST API with Express.js, a MongoDB Atlas DB, and secure JWT authentication.",
+   skills: ['Express.js', 'MongoDB', 'JWT', "API"],
+   link: "",
+   image: "/images/e-commerce-banner.jpeg",
+   date: "MAY - JUNE 2023",
+   content: `
+As an exercise to learn about various topics, I created a secure e-commerce API in Express.js, deployed on Azure with Web App, and a complementary MongoDB Atlas database to store information about buyers, sellers and products.
+
+The API was designed to be used as a scalable distributed system for a client such as Depop.
+
+## Key Skills
+
+My key skills / takeaways from this project were:
+
+💻 **Security-Based Design** - the focus of this project was on the security and role-based access of the API, allowing different permissions for buyers, sellers and viewers, and as such it was a valuable exercise to implement.
+
+📲 **Microservice Development** - it was important to design the API as a scalable microservice system, and I learnt a lot about how to do this through this project.
+`,
+},
+{
+  title: "Sorting Visualizer in Pygame",
+  description: "Created a sorting algorithm visualizer in Python to display the time efficiency of different algorithms.",
+  skills: ['Python', 'Algorithms'],
+  link: "",
+  image: "/images/sorting-banner.png",
+  date: "APRIL 2020",
+  content: `
+I created a sorting algorithm visualizer in Python to display the time efficiency of different algorithms.
+
+## Key Skills
+
+My key skills / takeaways from this project were:
+
+💻 **Python Development** - by this point, I had solidified my experience in Python, and was extremely confident in the language.
+
+🧠 **Algorithms** - I learnt a lot about the efficiency of different sorting algorithms, and visualizing this to the user made it easier to understand.
+`,
+},
+{
+ title: "Secure Voting Blockchain with Multithreaded Sockets",
+ description: "Deployed a secure blockchain intended for use in a voting system, with working implementations of wallets, signatures, encryption, proof of work consensus algorithms and even fast multithreaded networking.",
+ skills: ['Python', 'Blockchain', 'Multithreading', "Sockets"],
+ link: "",
+ image: "/images/blockchain-banner.jpeg",
+ date: "DECEMBER 2023",
+ content: `
+I created a secure blockchain intended for use in a voting system, with working implementations of wallets, signatures, encryption, proof of work consensus algorithms and even fast multithreaded networking.
+
+This exercise was very useful to understand the inner workings of blockchain technology, and to understand how to implement complex algorithms. In addition it was a nice touch to implement sockets to allow node interaction, and multithreading to make this computing faster.
+
+## Key Skills
+
+My key skills / takeaways from this project were:
+
+🧱 **Blockchain Development** - through this project I understood vital concepts such as hashing and proof of work in blockchain systems for security.
+
+🏎️ **Multithreading for Speed** - it was useful to implement my multithreading and concurrency knowledge from my university course to speed up computing here by up to 5x.
+`,
+},
+{
+  title: "Handwritten AI Digit Recognizer",
+  description: "Trained a Tensorflow neural network to recognize digits written in a Tkinter GUI in real time, with 99% accuracy.",
+  skills: ['Tensorflow', 'Artificial Intelligence'],
+  link: "",
+  image: "/images/digit-banner.png",
+  date: "JANUARY 2021",
+  content: `
+I created a neural network using Tensorflow to recognize digits written in a Tkinter GUI in real time.
+
+## Key Skills
+
+My key skills / takeaways from this project were:
+
+📚 **Neural Network Training + Testing** - this was my first time implementing the training and testing process known in Machine Learning, in a project that I was unfamiliar with, solidifying my ML skills.
+`,
+},
 ]
 
 export const ABOUT_ME_MARKDOWN = `

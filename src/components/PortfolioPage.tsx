@@ -14,7 +14,8 @@ function Resume() {
   const experienceRef = useRef<HTMLDivElement>(null)
   const projectsRef = useRef<HTMLDivElement>(null)
   const [showContactForm, setShowContactForm] = useState(false)
-  const [showEmailToast, setShowEmailToast] = useState(false)
+  // EMAIL TOAST COMMENTED OUT FOR SECURITY
+  // const [showEmailToast, setShowEmailToast] = useState(false)
   const [showContactToast, setShowContactToast] = useState(false)
   const [showErrorToast, setShowErrorToast] = useState('')
   const [activeSection, setActiveSection] = useState('about') // Set initial state to 'about'
@@ -23,6 +24,35 @@ function Resume() {
   const [mounted, setMounted] = useState(false)
 
   const { theme, setTheme } = useTheme()
+
+  const skillColors: { [key: string]: string } = {
+    'Swift': 'bg-blue-100 text-blue-800 dark:bg-blue-800 dark:text-blue-100',
+    'UIKit': 'bg-green-100 text-green-800 dark:bg-green-800 dark:text-green-100',
+    'Machine Learning': 'bg-yellow-100 text-yellow-800 dark:bg-yellow-800 dark:text-yellow-100',
+    'Artificial Intelligence': 'bg-black text-white dark:bg-white dark:text-black',
+    'Python': 'bg-pink-100 text-pink-800 dark:bg-pink-800 dark:text-pink-100',
+    'Quant': 'bg-purple-100 text-purple-800 dark:bg-purple-800 dark:text-purple-100',
+    'Tailwind CSS': 'bg-cyan-100 text-cyan-800 dark:bg-cyan-800 dark:text-cyan-100',
+    'Leadership': 'bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-100',
+    'Next.js': 'bg-blue-200 text-blue-900 dark:bg-blue-900 dark:text-blue-200',
+    'TypeScript': 'bg-blue-300 text-blue-900 dark:bg-blue-900 dark:text-blue-300',
+    'Java': 'bg-red-200 text-red-900 dark:bg-red-900 dark:text-red-200',
+    'Agile': 'bg-green-200 text-green-900 dark:bg-green-900 dark:text-green-200',
+    'Figma': 'bg-purple-200 text-purple-900 dark:bg-purple-900 dark:text-purple-200',
+    'API': 'bg-yellow-200 text-yellow-900 dark:bg-yellow-900 dark:text-yellow-200',
+    'React.js': 'bg-blue-400 text-blue-900 dark:bg-blue-900 dark:text-blue-400',
+    'PostgreSQL': 'bg-orange-200 text-orange-900 dark:bg-orange-900 dark:text-orange-200',
+    'Firebase Auth': 'bg-yellow-300 text-yellow-900 dark:bg-yellow-900 dark:text-yellow-300',
+    'Heroku': 'bg-indigo-200 text-indigo-900 dark:bg-indigo-900 dark:text-indigo-200',
+    'Express.js': 'bg-green-300 text-green-900 dark:bg-green-900 dark:text-green-300',
+    'MongoDB': 'bg-green-400 text-green-900 dark:bg-green-900 dark:text-green-400',
+    'JWT': 'bg-red-300 text-red-900 dark:bg-red-900 dark:text-red-300',
+    'Algorithms': 'bg-blue-500 text-blue-900 dark:bg-blue-900 dark:text-blue-500',
+    'Blockchain': 'bg-gray-200 text-gray-900 dark:bg-gray-900 dark:text-gray-200',
+    'Multithreading': 'bg-purple-300 text-purple-900 dark:bg-purple-900 dark:text-purple-300',
+    'Sockets': 'bg-yellow-400 text-yellow-900 dark:bg-yellow-900 dark:text-yellow-400',
+    'Tensorflow': 'bg-orange-300 text-orange-900 dark:bg-orange-900 dark:text-orange-300',
+  }
 
   useEffect(() => {
     setMounted(true)
@@ -188,7 +218,7 @@ function Resume() {
                       <h5 className="text-lg font-semibold mb-2 text-[#1a1a1a] dark:text-[#ffffff]">
                         {experience.title} · {experience.company}
                       </h5>
-                      <p className="mb-3 text-[#2c2c2c] dark:text-[#f4f1e8]">{experience.description}</p>
+                      <ReactMarkdown className="mb-3 text-[#2c2c2c] dark:text-[#f4f1e8]">{experience.description}</ReactMarkdown>
                       <div className="flex flex-wrap gap-2">
                         {experience.skills.map((skill) => (
                           <span key={skill} className={`px-2 py-1 rounded-full text-xs font-medium ${skillColors[skill]} hover:shadow-md transition-shadow duration-300`}>
@@ -225,7 +255,9 @@ function Resume() {
                     </div>
                     <div className="p-4">
                       <h4 className="text-lg font-semibold mb-2 text-[#1a1a1a] dark:text-[#ffffff]">{project.title}</h4>
-                      <p className="text-sm text-[#2c2c2c] dark:text-[#f4f1e8] mb-3">{project.description}</p>
+                      
+                        <ReactMarkdown className={"text-sm text-[#2c2c2c] dark:text-[#f4f1e8] mb-3"}>{project.description}</ReactMarkdown>
+                      
                       <div className="flex flex-wrap gap-2">
                         {project.skills.map((skill) => (
                           <span key={skill} className={`px-2 py-1 rounded-full text-xs font-medium ${skillColors[skill]} hover:shadow-md transition-shadow duration-300`}>
@@ -283,12 +315,20 @@ function Resume() {
                   display: none;
                 }
               `}</style>
-              <img src={selectedItem.image} alt={selectedItem.title} className="w-full h-48 object-cover" />
+              {selectedItem.image && (
+                <Image
+                  src={selectedItem.image}
+                  alt={selectedItem.title}
+                  width={500}
+                  height={300}
+                  className="w-full h-48 object-cover"
+                />
+              )}
               <div className="p-6">
                 <h2 className="text-2xl font-bold mb-2 text-[#1a1a1a] dark:text-[#ffffff]">{selectedItem.title}</h2>
                 {'company' in selectedItem && <p className="text-lg text-[#4a4a4a] dark:text-[#cccccc] mb-2">{selectedItem.company}</p>}
                 <p className="text-sm text-[#4a4a4a] dark:text-[#cccccc] mb-4">
-                  {'dateRange' in selectedItem ? selectedItem.dateRange : `Date: ${selectedItem.date}`}
+                  {'dateRange' in selectedItem ? selectedItem.dateRange : `${selectedItem.date}`}
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {selectedItem.skills.map((skill) => (
@@ -331,7 +371,8 @@ function Resume() {
           </div>
         </div>
       )}
-      <AnimatePresence>
+      {/* EMAIL TOAST COMMENTED OUT FOR SECURITY */}
+      {/* <AnimatePresence>
         {showEmailToast && (
           <motion.div 
             initial={{ opacity: 0, y: 50 }}
@@ -342,7 +383,7 @@ function Resume() {
             Email copied to clipboard!
           </motion.div>
         )}
-      </AnimatePresence>
+      </AnimatePresence> */}
       <AnimatePresence>
         {showContactToast && (
           <motion.div 
