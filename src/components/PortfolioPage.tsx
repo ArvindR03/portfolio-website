@@ -1,14 +1,13 @@
 'use client'
 
 import { useRef, useState, useEffect } from 'react'
-import { Github, Linkedin, Mail, Moon, Sun, Send, Info } from 'lucide-react'
-import { PT_Serif } from 'next/font/google'
+import { Github, Linkedin, Moon, Sun, Send, Info } from 'lucide-react'
 import { ThemeProvider, useTheme } from 'next-themes'
 import Link from 'next/link'
 import ReactMarkdown from 'react-markdown'
 import { motion, AnimatePresence } from 'framer-motion'
 import Image from 'next/image'
-import { NAME, TITLE, SINGLE_LINE, GITHUB_LINK, LINKEDIN_LINK, ABOUT_ME_MARKDOWN, ptSerif, skillColors, HEADINGS, EMAIL, experiences, projects, ExperienceInterface, ProjectInterface } from '../lib/constants'
+import { NAME, TITLE, SINGLE_LINE, GITHUB_LINK, LINKEDIN_LINK, ABOUT_ME_MARKDOWN, ptSerif, skillColors, HEADINGS, experiences, projects, ExperienceInterface, ProjectInterface } from '../lib/constants'
 
 function Resume() {
   const aboutRef = useRef<HTMLDivElement>(null)
@@ -21,7 +20,6 @@ function Resume() {
   const [activeSection, setActiveSection] = useState('about') // Set initial state to 'about'
   const [showPopup, setShowPopup] = useState(false)
   const [selectedItem, setSelectedItem] = useState<ExperienceInterface | ProjectInterface | null>(null)
-  const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 })
   const [mounted, setMounted] = useState(false)
 
   const { theme, setTheme } = useTheme()
@@ -76,12 +74,6 @@ function Resume() {
     }
   };
 
-  const copyEmailToClipboard = () => {
-    navigator.clipboard.writeText(EMAIL)
-    setShowEmailToast(true)
-    setTimeout(() => setShowEmailToast(false), 3000)
-  }
-
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY + 200;
@@ -98,25 +90,6 @@ function Resume() {
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const handleMouseEnter = (type: string, index: number) => {
-    // No longer setting hoveredCard
-  };
-
-  const handleMouseLeave = () => {
-    // No longer setting hoveredCard
-  };
-
-  useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      setCursorPosition({ x: e.clientX, y: e.clientY });
-    };
-
-    window.addEventListener('mousemove', handleMouseMove);
-    return () => {
-      window.removeEventListener('mousemove', handleMouseMove);
-    };
   }, []);
 
   return (
@@ -156,10 +129,6 @@ function Resume() {
               <Link href={LINKEDIN_LINK} target="_blank" rel="noopener noreferrer">
                 <Linkedin className="w-5 h-5 text-[#4a4a4a] hover:text-[#1a1a1a] dark:text-[#cccccc] dark:hover:text-[#ffffff]" />
               </Link>
-              {/* EMAIL COMMENTED OUT FOR SECURITY */}
-              {/* <button onClick={copyEmailToClipboard}>
-                <Mail className="w-5 h-5 text-[#4a4a4a] hover:text-[#1a1a1a] dark:text-[#cccccc] dark:hover:text-[#ffffff]" />
-              </button> */}
             </div>
             <div className="flex space-x-3">
               <button

@@ -1,5 +1,4 @@
-import { EMAIL } from '@/lib/constants';
-import { NextRequest, NextResponse } from 'next/server';
+import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 import { render } from '@react-email/render';
 import ContactEmail from '@/emails/ContactEmail';

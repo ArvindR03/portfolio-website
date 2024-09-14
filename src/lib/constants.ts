@@ -27,7 +27,8 @@ export const HEADINGS = {
   projects: 'PROJECTS',
 }
 
-export const EMAIL = 'arvindr03@gmail.com'
+// removed email for security reasons
+export const EMAIL = ''
 export const NAME = 'Arvind Raghu'
 export const TITLE = 'University of Cambridge BA Hons Computer Science, Final Year'
 export const SINGLE_LINE = 'I build models and software that are elegant and impactful, and help CS students achieve their potential.'
