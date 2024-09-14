@@ -1,20 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Resume Website
+
+This is my resume website created using TypeScript, Next.js, Nodemailer, React-Email, and Cursor AI.
 
 ## Getting Started
 
-First, run the development server:
+To use this template, follow these steps:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. **Clone the repository:**
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+    ```bash
+    git clone https://github.com/your-username/your-repo-name.git
+    cd your-repo-name
+    ```
+
+2. **Install dependencies:**
+
+    ```bash
+    npm install
+    # or
+    yarn install
+    # or
+    pnpm install
+    ```
+
+3. **Create your environment variables file:**
+
+    Create a `.env.local` file in the root of your project and add the necessary environment variables. For example:
+
+    ```env
+    NEXT_PUBLIC_API_URL=your_api_url
+    EMAIL_SERVICE=your_email_service
+    EMAIL_USER=your_email_user
+    EMAIL_PASS=your_email_password
+    ```
+
+4. **Modify constants:**
+
+    Open `constants.ts` and update the values to match your personal information and configuration. For example:
+
+    ```typescript
+    // constants.ts
+    export const NAME = 'Your Name';
+    export const EMAIL = 'your-email@example.com';
+    export const PHONE = 'your-phone-number';
+    // Add other constants as needed
+    ```
+
+5. **Run the development server:**
+
+    ```bash
+    npm run dev
+    # or
+    yarn dev
+    # or
+    pnpm dev
+    # or
+    bun dev
+    ```
+
+    Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
