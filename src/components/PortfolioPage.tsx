@@ -25,35 +25,6 @@ function Resume() {
 
   const { theme, setTheme } = useTheme()
 
-  const skillColors: { [key: string]: string } = {
-    'Swift': 'bg-blue-100 text-blue-800 dark:bg-blue-800 dark:text-blue-100',
-    'UIKit': 'bg-green-100 text-green-800 dark:bg-green-800 dark:text-green-100',
-    'Machine Learning': 'bg-yellow-100 text-yellow-800 dark:bg-yellow-800 dark:text-yellow-100',
-    'Artificial Intelligence': 'bg-black text-white dark:bg-white dark:text-black',
-    'Python': 'bg-pink-100 text-pink-800 dark:bg-pink-800 dark:text-pink-100',
-    'Quant': 'bg-purple-100 text-purple-800 dark:bg-purple-800 dark:text-purple-100',
-    'Tailwind CSS': 'bg-cyan-100 text-cyan-800 dark:bg-cyan-800 dark:text-cyan-100',
-    'Leadership': 'bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-100',
-    'Next.js': 'bg-blue-200 text-blue-900 dark:bg-blue-900 dark:text-blue-200',
-    'TypeScript': 'bg-blue-300 text-blue-900 dark:bg-blue-900 dark:text-blue-300',
-    'Java': 'bg-red-200 text-red-900 dark:bg-red-900 dark:text-red-200',
-    'Agile': 'bg-green-200 text-green-900 dark:bg-green-900 dark:text-green-200',
-    'Figma': 'bg-purple-200 text-purple-900 dark:bg-purple-900 dark:text-purple-200',
-    'API': 'bg-yellow-200 text-yellow-900 dark:bg-yellow-900 dark:text-yellow-200',
-    'React.js': 'bg-blue-400 text-blue-900 dark:bg-blue-900 dark:text-blue-400',
-    'PostgreSQL': 'bg-orange-200 text-orange-900 dark:bg-orange-900 dark:text-orange-200',
-    'Firebase Auth': 'bg-yellow-300 text-yellow-900 dark:bg-yellow-900 dark:text-yellow-300',
-    'Heroku': 'bg-indigo-200 text-indigo-900 dark:bg-indigo-900 dark:text-indigo-200',
-    'Express.js': 'bg-green-300 text-green-900 dark:bg-green-900 dark:text-green-300',
-    'MongoDB': 'bg-green-400 text-green-900 dark:bg-green-900 dark:text-green-400',
-    'JWT': 'bg-red-300 text-red-900 dark:bg-red-900 dark:text-red-300',
-    'Algorithms': 'bg-blue-500 text-blue-900 dark:bg-blue-900 dark:text-blue-500',
-    'Blockchain': 'bg-gray-200 text-gray-900 dark:bg-gray-900 dark:text-gray-200',
-    'Multithreading': 'bg-purple-300 text-purple-900 dark:bg-purple-900 dark:text-purple-300',
-    'Sockets': 'bg-yellow-400 text-yellow-900 dark:bg-yellow-900 dark:text-yellow-400',
-    'Tensorflow': 'bg-orange-300 text-orange-900 dark:bg-orange-900 dark:text-orange-300',
-  }
-
   useEffect(() => {
     setMounted(true)
   }, [])
@@ -340,14 +311,14 @@ function Resume() {
                 <div className="prose dark:prose-invert max-w-none text-sm text-[#2c2c2c] dark:text-[#f4f1e8]">
                 <ReactMarkdown
                     components={{
-                      h1: ({node, ...props}) => <h1 className="text-2xl font-bold mt-6 mb-3" {...props} />,
-                      h2: ({node, ...props}) => <h2 className="text-xl font-semibold mt-4 mb-2" {...props} />,
-                      h3: ({node, ...props}) => <h3 className="text-lg font-semibold mt-3 mb-2" {...props} />,
-                      p: ({node, ...props}) => <p className="mb-3" {...props} />,
-                      ul: ({node, ...props}) => <ul className="list-disc pl-5 mb-3" {...props} />,
-                      ol: ({node, ...props}) => <ol className="list-decimal pl-5 mb-3" {...props} />,
-                      li: ({node, ...props}) => <li className="mb-1" {...props} />,
-                      code: ({node, className, children, ...props}) => {
+                      h1: ({ ...props }) => <h1 className="text-2xl font-bold mt-6 mb-3" {...props} />,
+                      h2: ({ ...props }) => <h2 className="text-xl font-semibold mt-4 mb-2" {...props} />,
+                      h3: ({ ...props }) => <h3 className="text-lg font-semibold mt-3 mb-2" {...props} />,
+                      p: ({ ...props }) => <p className="mb-3" {...props} />,
+                      ul: ({ ...props }) => <ul className="list-disc pl-5 mb-3" {...props} />,
+                      ol: ({ ...props }) => <ol className="list-decimal pl-5 mb-3" {...props} />,
+                      li: ({ ...props }) => <li className="mb-1" {...props} />,
+                      code: ({ className, children, ...props }) => {
                         const match = /language-(\w+)/.exec(className || '')
                         return match ? (
                           <pre className="bg-gray-100 dark:bg-gray-800 rounded p-3 mb-3 overflow-x-auto">
