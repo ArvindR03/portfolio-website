@@ -300,3 +300,8 @@ Apart from programming, I am a **huge music fan** (🎵 my favourite album is Th
 
 I'm always looking for opportunities to push myself outside of my comfort zone and create an impact, so **please get in touch** if you'd like to work together! If you'd like to learn more about my experience, have a look below, and reach out to me to find out more 😎
 `;
+
+export const WEBSITE_METADATA = {
+  title: "Arvind Raghu",
+  description: "Hey there! I'm Arvind, a final year Cambridge Computer Science student and software + machine learning engineer.",
+}
